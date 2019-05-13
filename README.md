@@ -4,7 +4,7 @@ This package enables storing, updating, and retrieving stored data, in a local d
 
 ## Install using composer
 ```bash
-composer require form-synergy/file-storage
+composer require form-synergy/fs-storage
 ```
 
 ## Include the library
