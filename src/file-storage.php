@@ -102,7 +102,7 @@ class File_Storage
                 $this->files[$this->file] = $data;
                 break;
             case 'update':
-                $store_data = false;
+                $stored_data = false;
                 $replace    = false;
                 if (file_exists($this->file)) {
                     $stored_data = json_decode(file_get_contents($this->file), true);
