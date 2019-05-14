@@ -15,7 +15,7 @@ namespace FormSynergy;
 /**
  * File_Storage class
  *
- * @version 1.5.0
+ * @version 1.5.0.1
  *
  */
 class File_Storage
@@ -109,7 +109,6 @@ class File_Storage
                 }
                 if ($stored_data) {
                     $replace = array_replace($stored_data, $data);
-                    
                 }
                 if ($replace) {
                     $this->files[$this->file] = $replace;
@@ -250,10 +249,7 @@ class File_Storage
     public function In($name)
     {
         if ($this->find) {
-            $file = $this->storage . '/';
-            $file .= $this->package;
-            $file .= '-' . $name . '.json';
-            $data = $this->Get($file);
+            $data = $this->Get($name);
             $return = $data && isset($data[$this->find]) 
                 ? $data[$this->find] 
                 : false;
